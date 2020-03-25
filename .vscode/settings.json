@@ -9,5 +9,6 @@
     "workbench.colorCustomizations": {
         "editorError.foreground":   "#ff0000",
         "editorWarning.foreground": "#ffe600",
-    }
+    },
+    "liveServer.settings.port": 5501
 }
