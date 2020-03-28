@@ -5,5 +5,8 @@
         "latex",
         "plaintext",
         "python"
-    ]
+    ],
+
+    "liveshare.nameTagVisibility": "Always",
+	"liveshare.shareExternalFiles": false,
 }
