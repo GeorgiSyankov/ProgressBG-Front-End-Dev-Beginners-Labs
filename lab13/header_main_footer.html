@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            box-sizing: border-box;
+        }
+		header, main,footer{
+			border: 5px solid black;
+			box-sizing: border-box;
+		}
+        header{
+            height: 20vh;
+			background-color:#f99;
+        }
+        main{
+			background-color:#9c9;
+            min-height: 60vh;
+			/* overflow: hidden; */
+        }
+        footer{
+			background-color:#99F;
+            height: 20vh;
+        }
+		.social_links{
+			position: fixed;
+			top:calc((100vh - 5em)/2);
+			left: 0;
+			width: 1em;
+			height: 5em;
+			background: #999;
+			opacity: 1;
+		}
+		.page_content{
+			font-size: 30px;
+		}
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+		<div class="social_links"></div>
+		<div class="page_content">
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor commodi aspernatur dicta est ea beatae eius, illum excepturi atque optio. Consectetur veritatis neque deleniti aliquid esse voluptate ullam error inventore?</p>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias sapiente repellendus quos tenetur temporibus assumenda maiores ipsa, laborum voluptates beatae culpa enim aspernatur ad neque voluptas explicabo vel. Minima, sapiente.</p>
+		</div>
+	</main>
+    <footer></footer>
+</body>
+</html>

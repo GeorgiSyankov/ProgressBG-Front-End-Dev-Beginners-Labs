@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Absolute</title>
+	<style>
+		.parent{
+			position: relative;
+			margin: 0 auto;
+			width: 15em;
+			height: 10em;
+			background-color: #F99;
+		}
+		.child{
+			position: absolute;
+			bottom: 0; right: 0;
+			width: 5em;
+			height: 5em;
+			background-color: #99F;
+		}
+		.top_icon{
+			position: fixed;
+			bottom: 1em; right: 1em;
+			width: 1em;
+			height: 1em;
+			background-color: #9F9;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+	<main>
+		<p>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum ullam architecto est maiores ratione placeat provident dolorum sint, asperiores quidem doloremque nisi, nobis tenetur corporis accusamus aspernatur. Vitae, atque reprehenderit?</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque incidunt deserunt ab impedit, corporis, nostrum nulla dicta nesciunt neque veniam quibusdam tempora at omnis, laboriosam quisquam amet! Nesciunt, quam maxime?</p>
+	</main>
+	<div class="top_icon"></div>
+</body>
+</html>

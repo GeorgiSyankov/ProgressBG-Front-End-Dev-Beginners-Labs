@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed</title>
+    <style>
+        body{
+            margin: 0;
+            box-sizing: border-box;
+        }
+		header, main,footer{
+			border: 5px solid black;
+			box-sizing: border-box;
+		}
+        header{
+			position: fixed;
+			top:0; left:0;right: 0;
+            height: 20vh;
+			background-color:#f99;
+        }
+        main{
+			background-color:#9c9;
+            min-height: 60vh;
+			/* overflow: hidden; */
+        }
+        footer{
+			background-color:#99F;
+            height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main></main>
+    <footer></footer>
+</body>
+</html>
