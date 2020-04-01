@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Float Task</title>
+	<!-- left column:
+		широчина: 30 процента от VP
+		височина: 100 процента от VP
+		фон: червен
+	right column:
+		широчина: 70 процента от VP
+		височина: 100 процента от VP
+        фон: син -->
+    <style>
+        body {
+            margin: 0;
+        }
+		header{
+			height: 3em;
+			background-color: green;
+		}
+		.col{
+			height: 50vh;
+			float: left;
+		}
+        .left{
+            width: 30%;
+            background-color: red;
+        }
+        .right{
+            width: 30%;
+            background-color: blue;
+		}
+		main{
+			border: 10px solid orange;
+		}
+		footer{
+			height: 3em;
+			background-color: gray;
+		}
+		.clearfix{
+			border: 5px solid black;
+			clear: both ;
+		}
+    </style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<aside class="col left"></aside>
+		<aside class="col right"></aside>
+		<div class="clearfix"></div>
+	</main>
+	<footer>Footer</footer>
+</body>
+</html>

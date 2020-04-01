@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vert Align</title>
+	<style>
+		.container{
+			position: relative;
+			width: 30vh;
+			height: 30vh;
+			line-height: 5em;
+			background: #99FF99;
+		}
+		.centered{
+			position: absolute;
+			top:50%; left: 50%;
+
+			transform: translate(-50%,-50%);
+
+			width: 2em;
+			height: 2em;
+			background-color: #99f;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+    <div class="centered"></div>
+</div>
+</body>
+</html>

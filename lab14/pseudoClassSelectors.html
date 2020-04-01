@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<title>Pseudo-class</title>
+	<style>
+		a{
+			display: inline-block;
+			text-decoration: none;
+		}
+
+		footer a:active{
+			background: orange;
+			border: 5px solid gray;
+		}
+		footer a:hover{
+			background: gray;
+            text-decoration: underline;
+        }
+		footer a:visited{
+
+			border: 5px solid gray;
+		}
+
+        footer a:link{
+            color: green;
+			border: 5px solid green;
+        }
+
+		.box:visited{
+			height: 4em;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">box</div>
+	<footer>
+		<a href="https://www.google.com/">google.com</a>
+		<a href="hsdjhdsjds">some link</a>
+	</footer>
+
+</html>
