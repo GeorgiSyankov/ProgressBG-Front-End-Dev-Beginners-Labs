@@ -9,5 +9,6 @@
         "plaintext",
         "python",
         "javascript"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
