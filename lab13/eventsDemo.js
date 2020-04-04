@@ -2,12 +2,17 @@ $(function () {
 	//hide all descriptions:
 	// $('.description').hide();
 
-	// $('.item').on('click', '.title', function (e) {
-	// 	$(this).css('color','red');
-	// })
+	$('.item').click(function (e) {
+		// console.dir(e);
+		// console.dir(this);
+		// console.dir($(this));
+		$(this).hide();
+	})
 
+	let parents = $('.removeBtn').parentsUntil('.items');
+	console.dir(parents);
 
-	// // show description on title click:
+	// show description on title click:
 	// $('.title').click(function (e) {
 	// 	// compare 'e' vs 'e.target'
 	// 	// compare 'this' vs '$(this)

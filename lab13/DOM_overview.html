@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM overview</title>
+	<style>
+		.page{
+			height: 5em;
+			background: antiquewhite;
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		user name: <input type="text" name="userName">
+		<button class="btn">Send</button>
+		<div class="output"></div>
+	</div>
+
+	<script>
+		const userName = document.querySelector('input[name="userName"]');
+		const output = document.querySelector('.output');
+		const btn = document.querySelector('.btn');
+		const page = document.querySelector('.page');
+
+		page.addEventListener('click', function(event) {
+			console.dir(event);
+			console.dir(event.target);
+			console.dir(event.currentTarget);
+		})
+
+
+
+
+
+	</script>
+</body>
+</html>
