@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>player init</title>
+</head>
+<body>
+	<ul class="player">
+		<li data-id="1" data-trackname="fooFiters">Track1</li>
+		<li>Track2</li>
+		<li>Track3</li>
+	</ul>
+	<script>
+		let ul = document.querySelector('.player');
+		ul.addEventListener('click', function (event) {
+			console.log( event.target.dataset.trackname);
+		})
+	</script>
+</body>
+</html>

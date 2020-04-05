@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Demos</title>
+	<!-- include jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+	</script>
+	<style>
+		.item{
+			border: 1px solid #999;
+			padding: 1em;
+		}
+		.title{
+			height: 2em;
+			background-color: #9F9;
+			cursor: pointer;
+		}
+		.description{
+			margin: 1em;
+			display: none;
+		}
+		.removeBtn{
+			/* display: none; */
+		}
+		.capitalizeTitle{
+
+		}
+	</style>
+</head>
+<body>
+	<div class="items">
+		<div class="item">
+			<div class="title">Title 1</div>
+			<div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem pariatur veritatis fugiat cupiditate quos magni ea laboriosam deleniti voluptatem. Possimus aspernatur, quaerat esse eveniet non quisquam adipisci rerum ducimus quam.</div>
+			<button class="removeBtn">remove</button>
+			<button class="capitalizeTitle">Capitalize Title</button>
+		</div>
+		<div class="item">
+			<div class="title">Title 2</div>
+			<div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem pariatur veritatis fugiat cupiditate quos magni ea laboriosam deleniti voluptatem. Possimus aspernatur, quaerat esse eveniet non quisquam adipisci rerum ducimus quam.</div>
+			<button class="removeBtn">remove</button>
+			<button class="capitalizeTitle">Capitalize Title</button>
+
+		</div>
+		<div class="item">
+			<div class="title">Title 3</div>
+			<div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem pariatur veritatis fugiat cupiditate quos magni ea laboriosam deleniti voluptatem. Possimus aspernatur, quaerat esse eveniet non quisquam adipisci rerum ducimus quam.</div>
+			<button class="removeBtn">remove</button>
+			<button class="capitalizeTitle">Capitalize Title</button>
+		</div>
+	</div>
+	<button class="addBtn">add</button>
+
+	<!-- <script src="eventsDemo.js"></script> -->
+	<!-- <script src="selectorsDemos.js"></script> -->
+	<!-- <script src="addElements.js"></script> -->
+	<script>
+		// console.dir($('.item'));
+		// $('.item').css('background','#F99');
+
+
+		// $(".removeBtn").click(function () {
+		// 	$(this).parent().show();
+		// })
+
+		// $('.title').click(function(){
+		// 	$(this).next().toggle(1000);
+		// })
+
+
+		$(".capitalizeTitle").click(function () {
+			let title = $(this).siblings('.title');
+
+			let upperTitleText = title.text().toLocaleUpperCase();
+
+			// console.log(upperTitleText);
+			title.text(upperTitleText);
+
+		})
+
+
+
+
+
+		// nl
+		// $(".capitalizeTitle").click(function () {
+		// 	$(".title").css("text-transform", "uppercase");
+		// })
+
+
+
+		//Stefan
+		// function capitalize(){};
+		// let capitalizeBtn = document.querySelector('.capitalizeTitle');
+		// capitalizeBtn.addEventListener('click', capitalize);
+
+
+
+		//Dim
+		// $("".capitalizeTitle").click (function(){
+		// 	$(".title")
+		// })
+		// //Atanaska
+		// $('.capitalizeTitle').click(function (){
+		// 	$(title)
+
+		// })
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Travering</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+	</script>
+	<style>
+		.grandparent{
+			border: 1px solid #000;
+		}
+		.parent{
+			border: 1px solid #900;
+			margin: 1em;
+		}
+		.child{
+			border: 1px solid #F99;
+			margin: 1em;
+		}
+		.uncle{
+			border: 1px solid #99f;
+			margin: 1em;
+		}
+	</style>
+</head>
+<body>
+	<div class="grandparent">
+		grandparent
+		<div class="parent">
+			parent
+			<div class="child">child1</div>
+			<div class="child">child2</div>
+		</div>
+		<div class="uncle">uncle1
+			<div class="child">child1</div>
+		</div>
+		<div class="uncle">uncle1</div>
+	</div>
+
+	<script>
+		$(function () {
+			$('.child').parent().css('background', 'yellow');
+			$('.child').parent('.uncle').css('background', 'orange')
+		})
+	</script>
+</body>
+</html>
