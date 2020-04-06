@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>before and after</title>
+	<style>
+		.red{
+			width: 20em;
+			height: 20em;
+			background-color: #f99;
+		}
+		.blue{
+			width: 10em;
+			height: 10em;
+			background-color: #99F;
+		}
+		.red::after{
+			content: "div";
+			display: block;
+			width: 10em;
+			height: 10em;
+			background-color: #99F;
+		}
+		.rain:after{
+			content:"\2602";
+			color: #f99;
+		}
+	</style>
+
+</head>
+<body>
+	<div>test <span class="rain">test</span> test</div>
+	<!-- <div class="red">
+		<div>dev</div>
+	</div> -->
+	<i class="fa fa-square"></i>
+	&lt;
+	&#9969;
+</body>
+</html>

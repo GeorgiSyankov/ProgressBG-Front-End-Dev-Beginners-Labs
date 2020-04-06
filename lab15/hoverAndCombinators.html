@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hover and Combinators</title>
+	<style>
+		.parent{
+			width: 20em;
+			height: 20em;
+			background-color: #f99;
+		}
+		.child{
+			width: 15em;
+			height: 15em;
+			background-color: #9f9;
+		}
+		.parent:hover .child{
+			border: 1px solid red;
+			background-color: #99f;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Focus</title>
+	<style>
+		.box{
+			font-size: 2em;
+			border: 1px solid red;
+		}
+		.box:focus{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" tabindex="1">box1</div>
+	<div class="box" tabindex="2">box2</div>
+	<div class="box" tabindex="3">box3</div>
+	<hr>
+	<div><input type="text"></div>
+	<div><input type="text"></div>
+	<div><input type="text"></div>
+</body>
+</html>

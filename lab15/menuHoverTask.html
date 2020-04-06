@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>menu hover task</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		.menu>li{
+			width: 8em;
+			padding: 1em;
+            border: 1px solid red;
+			cursor: pointer;
+        }
+        .submenu{
+            display: none;
+        }
+		.menu li{
+            display: inline-block;
+			vertical-align: top;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        /* .menu:hover {
+            display: block;
+        }  */
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li><em>Item 1</em>
+			<ul class="submenu">
+				<li>Subitem 1</li>
+				<li>Subitem 1</li>
+			</ul>
+		</li>
+		<li><em>Item 2</em>
+			<ul class="submenu">
+				<li>Subitem 1</li>
+				<li>Subitem 1</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
