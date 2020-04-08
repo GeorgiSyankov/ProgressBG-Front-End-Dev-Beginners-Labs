@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>env effext</title>
+	<style>
+		.box{
+			background-color: white;
+			position: relative;
+			width: 30em;
+			height: 8em;
+			border: 1px solid #999;
+
+		}
+		.box::after{
+			content: "";
+			display: block;
+
+			width: 10em;
+			height: 1px;
+			box-shadow: 5px 5px 0 5px red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+			z-index: -3;
+			transform: rotate(355deg);
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!-- <div class="shadow"></div> -->
+	</div>
+</body>
+</html>

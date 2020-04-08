@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>animation</title>
+	<style>
+		.box {
+			position: fixed;
+			margin-left: 80vw;
+			top: 0;
+			width: 5em;
+			height: 5em;
+			background: red;
+			animation: iep_move 5s;
+		}
+
+		@keyframes iep_move{
+			 /*you can add as many keyframes as you need*/
+			 0% {
+				margin-left: 0vw;
+				transform: rotate(0deg);
+				background: red;
+			}
+			100% {
+				margin-left: 80vw;
+				transform: rotate(360deg);
+				background: yellow;
+			}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

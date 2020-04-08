@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>trans</title>
+	<style>
+		.hoverContainer{
+			height: 10em;
+			border: 1px solid #000;
+		}
+		.boll{
+			width: 10em;
+			height: 10em;
+			background-color: red;
+			border-radius: 100%;
+			margin-left: 0;
+			transition-duration: 5s;
+			transition-property: background-color, width;
+			/* transition-delay: 2s; */
+			transition-timing-function: linear;
+
+			/* 1 .. 2000ms
+			10em 9.. 4em */
+
+		}
+
+		.boll:hover{
+			width: 4em;
+			height: 4em;
+			margin-left: calc(100vw-10em);
+			background-color: blue;
+			border-radius: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="boll"></div>
+</body>
+</html>
