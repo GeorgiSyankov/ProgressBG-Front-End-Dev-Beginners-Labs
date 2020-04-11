@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAcA,AAAA,OAAO,CAAA;EACN,KAAK,ECfK,KAAK;EDgBf,MAAM,ECfK,KAAK;EDgBhB,gBAAgB,EAAE,GAAG;CAOrB;;AAVD,AAKC,OALM,CAKN,GAAG,CAAA;EACF,KAAK,EAAE,KAAY;EACnB,MAAM,EAAE,KAAa;EACrB,gBAAgB,EAAE,IAAI;CACtB",
+    "sources": [
+        "simpleMixin.scss",
+        "_global_variables.scss"
+    ],
+    "names": [],
+    "file": "simpleMixin.css"
+}

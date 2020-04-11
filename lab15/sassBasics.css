@@ -1,0 +1,12 @@
+.parent {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.parent div {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+/*# sourceMappingURL=sassBasics.css.map */

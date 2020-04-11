@@ -1,0 +1,14 @@
+$box_width:200px;
+$box_height:$box_width*2;
+
+.parent{
+	width: $box_width;
+	height: $box_height;
+	background-color: red;
+
+	div{
+		width: $box_width/2;
+		height: $box_height/2;
+		background-color: blue;
+	}
+}
