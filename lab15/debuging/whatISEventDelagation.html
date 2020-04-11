@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>whatISEventDelagation </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		ul{
+			border: 2px solid red;
+		}
+		li{
+			width: 80%;
+			height: 2em;
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>item 1</li>
+		<li>item 2</li>
+		<li>item 3</li>
+	</ul>
+	<div class="outNode"></div>
+
+	<script>
+		let ul = document.querySelector('ul');
+		let liNodes = document.querySelectorAll('li');
+		let outNode = document.querySelector('.outNode');
+
+		// the SLOW way:
+		for (let i = 0; i < liNodes.length; i++) {
+			const liObj = liNodes[i];
+			liObj.addEventListener('click', function(e){
+				console.log(`LI was clicked`);
+			})
+		}
+
+
+		ul.addEventListener('click', (event)=>{
+			console.log(`UL was clicked`);
+			const liObj = event.target;
+			liObj.addEventListener('click', function(e){
+				outNode.innerHTML = liObj.innerHTML;
+			})
+		})
+
+
+	</script>
+</body>
+</html>
