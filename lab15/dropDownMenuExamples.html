@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dropDownMenuExamples </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+	<style>
+		.mainMenu>li {
+			float: left;
+			width: 30%;
+			border: 5px solid blue;
+		}
+		.subMenu{
+			border: 5px solid green;
+			display: none;
+		}
+		.mainMenu>li:hover>.subMenu{
+			display: block;
+		}
+		.subMenu>li:active{
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="mainMenu">
+		<li>Супи
+			<ul class="subMenu">
+				<li>subitem 1</li>
+				<li>subitem 2</li>
+			</ul>
+		</li>
+		<li>Osnovni
+			<ul class="subMenu">
+				<li>subitem 1</li>
+				<li>subitem 2</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

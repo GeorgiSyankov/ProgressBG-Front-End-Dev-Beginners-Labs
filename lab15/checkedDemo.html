@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>checkedDemo </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		input{
+			display: none;
+		}
+
+		label div{
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			border: 1px solid #999;
+			border-radius: 100%;
+		}
+		input:checked+div{
+			background-color: red
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<form action="/test" method="get">
+		<fieldset>
+			<legend>Gender</legend>
+			<label>male: <input type="radio" name="gender" value="male"><div></div></label>
+			<label>female: <input type="radio" name="gender" value="female"><div></div></label>
+			<label>other: <input type="radio" name="gender" value="other"><div></div></label>
+		</fieldset>
+		<button type="submit">Ok</button>
+	</form>
+</body>
+</html>

@@ -8,5 +8,6 @@
     ],
 
     "liveshare.nameTagVisibility": "Always",
-	"liveshare.shareExternalFiles": false,
+    "liveshare.shareExternalFiles": false,
+    "liveServer.settings.port": 5501,
 }

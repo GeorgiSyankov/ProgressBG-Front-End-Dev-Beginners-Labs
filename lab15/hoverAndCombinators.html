@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hoverAndCombinators </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+	<style>
+		.parent{
+			width: 15em;
+			height: 15em;
+			background-color: #F99;
+		}
+		.child{
+			width: 10em;
+			height: 10em;
+			background-color: #99F;
+		}
+       .parent:hover>.child{
+           background-color: #9F9;
+       }
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+
+
+</body>
+</html>
