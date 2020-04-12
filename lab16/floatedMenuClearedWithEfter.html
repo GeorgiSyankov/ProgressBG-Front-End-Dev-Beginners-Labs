@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Task</title>
+
+    <style>
+		nav>ul{
+			list-style-type: none;
+			border: 2px solid green;
+		}
+        nav>ul>li{
+			font-size: 1em;
+			float: left;
+
+			width: 8em;
+			height: 2em;
+            border:2px solid gray;
+            padding-top: .7em;
+
+            background-color: red;
+			text-align: center;
+
+        }
+		nav>ul>li>a{
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			color: #EEE;
+			/* border: 1px solid green; */
+		}
+
+		.wrapper{
+			border: 5px solid #f99;
+		}
+		.box{
+			float: left;
+			width: 5em;
+			height: 5em;
+			margin: .5em;
+			border: 2px solid #99f;
+		}
+		.clearfix::after{
+			content: '';
+			display: block;
+			clear:both;
+		}
+
+    </style>
+</head>
+<body>
+	<nav>
+		<ul class="clearfix">
+			<li><a href="#">Products</a></li>
+			<li><a href="#">About <br>me</a></li>
+			<li id="test"><a href="#">Contacts</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo in repellendus esse, reiciendis debitis nemo, nesciunt facilis, ab repudiandae dicta soluta libero voluptates accusamus ea quos odit et quo laborum!</p>
+
+		<div class="wrapper clearfix">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam similique aliquam in. Enim at eius quam, non consectetur aut omnis laboriosam dolor animi tempore ex modi aliquam dolorem exercitationem.</p>
+	</main>
+
+
+</body>
+</div>

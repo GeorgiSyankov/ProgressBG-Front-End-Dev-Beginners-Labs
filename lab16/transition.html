@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>transition </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+	<style>
+		/* A stop */
+		.ball{
+			width: 10em;
+			height: 10em;
+			background-color: red;
+			border-radius: 100%;
+			/* transition: 2s; */
+			animation: ballEffect 2s 1;
+		}
+
+
+		@keyframes ballEffect{
+			0%, 100%{
+				width: 10em;
+				height: 10em;
+				background-color: red;
+			}
+			50%{
+				width: 5em;
+				height: 5em;
+				background-color: blue;
+			}
+		}
+
+
+		/* B stop
+		.ball:hover{
+			width: 5em;
+			height: 5em;
+			background-color: blue;
+		} */
+
+		p{
+			opacity: 1;
+			display: block;
+			font-size: 3em;
+			transition: 3s;
+		}
+		p:hover{
+			opacity: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="ball"></div>
+	<p>paragraphs</p>
+</body>
+</html>

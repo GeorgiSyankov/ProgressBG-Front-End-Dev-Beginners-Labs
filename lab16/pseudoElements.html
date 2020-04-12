@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>pseudoElements </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+	<style>
+		.box{
+			width: 20em;
+			height: 20em;
+			background-color: #F99;;
+		}
+		.box::before{
+			content:"@";
+			display: block;
+			border: 5px solid #9f9;
+			width: 10em;
+			height: 10em;
+		}
+		.quote::before, .quote::after{
+			content:'>>>';
+			color: aqua;
+		}
+		.customBullet>li::before{
+			content:'\204D';
+			color: red;
+
+		}
+		.customBullet>li::after{
+			content:'\03C0';
+			color: red;
+		}
+
+
+	</style>
+</head>
+<body>
+	<i class="fab fa-twitter-square"></i>
+	<ul class="customBullet">
+		<li>item 1</li>
+		<li>item 2</li>
+	</ul>
+	<hr>
+
+	<span>&#8269;</span>
+
+	<!-- <div class="box"></div> -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="quote">Voluptatibus</span>, obcaecati. Optio, ea debitis. Necessitatibus, cumque cupiditate suscipit sunt ad reiciendis corporis praesentium corrupti laboriosam quos, maxime nisi rem voluptate temporibus?</p>
+</body>
+</html>
