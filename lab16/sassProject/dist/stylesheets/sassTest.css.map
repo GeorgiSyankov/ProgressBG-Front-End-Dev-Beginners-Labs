@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../app/scss/sassTest.scss","../../app/scss/_variables.scss"],"names":[],"mappings":"AAEA;EACE;;AAEA;EACE,kBCNC;;ADSH;EACE;;AAGF;EACI;;AAEJ;EACI;;;AAKJ;EACE,OCrBG;;ADuBH;EACE;EACA;;;AAMN;EACE,OC/BM;EDgCN,QC/BO;EDgCP,kBCpCG;;ADsCH;EACE;EACA;EACA,kBCvCG","file":"sassTest.css"}

@@ -1,0 +1,36 @@
+header {
+  border: 2px solid #f99;
+}
+header:hover {
+  background-color: #f99;
+}
+header > nav {
+  border: 2px solid #9F9;
+}
+header li {
+  border: 2px solid #6a6a6a;
+}
+header .logo {
+  font-size: 2em;
+}
+
+main a:hover {
+  color: #9F9;
+}
+main a:hover:before {
+  content: ">>";
+  color: red;
+}
+
+.parent {
+  width: 200px;
+  height: 200px;
+  background-color: #f99;
+}
+.parent .child {
+  width: 100px;
+  height: 100px;
+  background-color: #9F9;
+}
+
+/*# sourceMappingURL=sassTest.css.map */

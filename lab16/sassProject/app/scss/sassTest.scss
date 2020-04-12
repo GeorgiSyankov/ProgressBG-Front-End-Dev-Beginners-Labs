@@ -1,0 +1,44 @@
+@import 'variables';
+
+header{
+  border: 2px solid $red;
+
+  &:hover{
+    background-color: $red;
+  }
+
+  &>nav{
+    border: 2px solid $green;
+  }
+
+  li{
+      border: 2px solid $black;
+  }
+  .logo{
+      font-size: 2em;
+  }
+}
+
+main{
+  a:hover{
+    color:$green;
+
+    &:before{
+      content:'>>';
+      color: red;
+    }
+  }
+
+}
+
+.parent{
+  width: $width;
+  height: $height;
+  background-color:$red;
+
+  .child{
+    width: $width/2;
+    height: $height/2;
+    background-color: $green;
+  }
+}
