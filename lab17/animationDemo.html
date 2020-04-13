@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>animationDemo </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+	<style>
+		.box{
+			width: 10em;
+			height: 10em;
+			border: 1px solid #000;
+			animation: changeColor 2s infinite;
+		}
+
+		@keyframes changeColor {
+			0%, 100%{
+				background-color: yellow;
+			}
+			30%{
+				background-color: red;
+			}
+			60%{
+				background-color: green;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="box"></div> -->
+</body>
+</html>

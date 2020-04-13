@@ -10,5 +10,6 @@
         "editorError.foreground":   "#ff0000",
         "editorWarning.foreground": "#ffe600",
     },
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "editor.fontSize": 20
 }
