@@ -1,15 +1,21 @@
 {
-    "spellright.language": [],
+    "spellright.language": [
+        "English (American)"
+    ],
     "spellright.documentTypes": [
         "markdown",
         "latex",
-        // "plaintext",
-        "python"
+        "html"
     ],
     "workbench.colorCustomizations": {
-        "editorError.foreground":   "#ff0000",
-        "editorWarning.foreground": "#ffe600",
+        "editorError.foreground": "#ff0000",
+        "editorWarning.foreground": "#ffe600"
     },
     "liveServer.settings.port": 5501,
-    "editor.fontSize": 20
+
+    "liveshare.shareExternalFiles": false,
+    "liveshare.autoShareServers": true,
+    "liveshare.focusBehavior":"prompt",
+    // "liveshare.nameTagVisibility": "Activity",
+    "liveshare.allowGuestTaskControl": true,
 }

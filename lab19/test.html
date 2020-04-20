@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>conditionalStatements </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		label{
+			display: block;
+			margin: 1em;
+		}
+		input[name="userName"]{
+			border: 1px solid red
+		}
+	</style>
+</head>
+<body>
+	<label>user Name: <input type="text" name="userName"></label>
+	<label>birth year: <input type="number" name="birthYear"></label>
+	<button class="btnOK">OK</button>
+	<div class="output"></div>
+
+	<script>
+		let userNameInput = document.querySelector('input[name="userName"]');
+		let birthYearInput = document.querySelector('input[name="birthYear"]');
+		let btnOK = document.querySelector('.btnOK');
+		let output = document.querySelector('.output');
+
+		function doSomethingWithUser(){
+			let userName  = userNameInput.value || "anonymous";
+
+
+			output.innerHTML = 'Hello ' + userName;
+		}
+
+		function doSomethingWithBirthYear(params) {
+			let birthYear = birthYearInput.value*1;
+			let currentYear = 2020;
+			let userAge =  currentYear - birthYear;
+
+			if(userAge>=18){
+				output.innerHTML += "Adult"
+			}else {
+				output.innerHTML += "Child"
+			}
+			output.innerHTML += "END"
+
+		}
+		btnOK.addEventListener('click',doSomethingWithBirthYear);
+
+
+	</script>
+</body>
+</html>

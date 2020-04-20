@@ -12,17 +12,18 @@
                 "kind": "build",
                 "isDefault": true
             },
-           "options": {
-               "cwd": "${fileDirname}"
+            "options": {
+                "cwd": "${fileDirname}"
             },
             "presentation": {
                 "reveal": "always",
-                "panel": "dedicated",
-                "focus": false,
+                "panel": "new",
+                "focus": true,
                 "clear": true,
                 "echo": false,
                 "showReuseMessage": false
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
