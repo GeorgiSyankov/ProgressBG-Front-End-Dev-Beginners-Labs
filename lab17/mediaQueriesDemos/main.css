@@ -1,0 +1,10 @@
+@media screen{
+	.mediaType::before{
+		content: 'Screen'
+	}
+}
+@media print{
+	.mediaType::before{
+		content: 'Print'
+	}
+}

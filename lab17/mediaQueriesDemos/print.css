@@ -1,0 +1,8 @@
+header{
+	display: none;
+}
+
+
+.mediaType::before{
+	content: 'Print'
+}

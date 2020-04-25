@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0;
+		}
+		.continer{
+			/* percentage from Viewport Width */
+			width: 50%;
+			/* percentage  of body width */
+			/* width: 50%; */
+			height: 80vh;
+			float: left;
+		}
+		.left{
+			background-color: #F99;
+		}
+		.right{
+			background-color: #9F9;
+		}
+		.clearfix::after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="page clearfix">
+		<div class="continer left"></div>
+		<div class="continer right"></div>
+
+	</div>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ab dolore. Rerum, inventore perferendis corporis optio facilis numquam ea, eaque vero quidem repudiandae fuga beatae nostrum, quibusdam ab ipsa rem!</p>
+</body>
+</html>

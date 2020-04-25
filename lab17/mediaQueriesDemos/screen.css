@@ -1,0 +1,10 @@
+header{
+	height: 20vh;
+	background: #F99;
+}
+h1{
+	border: 5px solid orange;
+}
+.mediaType::before{
+	content: 'Screen'
+}

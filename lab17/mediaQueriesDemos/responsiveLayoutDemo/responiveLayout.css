@@ -1,0 +1,43 @@
+/* @media [media_type and] [(media_feature_expr)*]{CSS Rules} */
+
+.left{
+	background-color: #F99;
+}
+.right{
+	background-color: #99F;
+}
+.clearfix::after{
+	display: block;
+	content: "";
+	clear:both;
+}
+
+
+
+/*  screen width < 960px => left and right on 2 row */
+@media screen and (orientation: landscape ){
+	/*  screen width >= 960px => left and right on 1 row */
+	.column{
+		width: 50%;
+		height: 100vh;
+		float:left;
+	}
+
+}
+
+/*  screen width > 960px => left and right on 2 row, each block half of the VH */
+@media (orientation: portrait ){
+	.column{
+		height: 50vh;
+	}
+}
+
+
+
+
+
+
+
+
+
+

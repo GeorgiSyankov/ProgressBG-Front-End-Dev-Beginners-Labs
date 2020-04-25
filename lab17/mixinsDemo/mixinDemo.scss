@@ -1,0 +1,44 @@
+// ***********************************************
+// VARIABLES DECLARATION
+$color 		: #F100FF;
+$bg_color : rgba(255,0,0,0.5);
+// ***********************************************
+
+
+// ***********************************************
+// SIMPLE MIXIN:
+@mixin centered_box() {
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin child_box() {
+	width: 50%;
+	height: 50%;
+	background: red;
+}
+// ***********************************************
+
+// ***********************************************
+// mixin with arguments
+@mixin border($width, $color){
+	border: $width solid $color;
+}
+// ***********************************************
+
+.container{
+	position: relative;
+	width: 10em;
+	height: 10em;
+
+	color: $color;
+	background: $bg_color;
+
+	@include border(5px, blue);
+
+	.child{
+		@include child_box;
+		@include centered_box;
+		@include border(3px, green);
+	}
+}
