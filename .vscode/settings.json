@@ -34,4 +34,5 @@
     "liveshare.focusBehavior":"prompt",
     // "liveshare.nameTagVisibility": "Activity",
     "liveshare.allowGuestTaskControl": true,
+    "peacock.color": "#215732",
 }
