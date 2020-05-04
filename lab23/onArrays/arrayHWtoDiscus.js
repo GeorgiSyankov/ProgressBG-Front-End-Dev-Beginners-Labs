@@ -70,7 +70,7 @@ function task3() {
 		// console.log(rulers[i]);
 
 		// iep: тук не ти трябва втория цикъл - не използваш 'j' а и така имаш повторения в конзолата
-		for (let j = 0; j < rulers.length; j++) {
+		// for (let j = 0; j < rulers.length; j++) {
 			// console.log(rulers[i][j]);
 
 			yearsOfRule = rulers[i][2] - rulers[i][1];
@@ -79,7 +79,7 @@ function task3() {
 			if (yearsOfRule > 15) {
 				console.log(titleCase(rulers[i][0]));
 			}
-		}
+		// }
 	}
 
 	// function fro Title Case
