@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bsGridSystem - 2 column layout</title>
+
+	<!-- ------------------------------ bootstrap ------------------------------ -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- ---------------------------- custom style ----------------------------- -->
+	<style>
+		header,footer{
+			height: 10vh;
+			background-color: #666;
+		}
+		.container-fluid{
+			border: 2px solid #9F9;
+		}
+		.mycol{
+			border: 1px solid #f99;
+			box-sizing: border-box;
+		}
+
+	</style>
+
+</head>
+<body>
+	<header>header</header>
+	<main>
+		<div class="container-fluid">
+			<div class="row">
+				<aside class="mycol col-xl-3">Col 1</aside>
+				<aside class="mycol col-xl-6">
+					Col 2 - span 2 columns width
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque vero laudantium excepturi dolorem officiis doloribus odit laborum maxime quisquam doloremque. Numquam mollitia accusantium modi libero est pariatur. Iste, officia pariatur!</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam iure consectetur aliquam similique rerum dolor amet enim esse blanditiis, placeat et ipsam veniam, qui explicabo magnam, sit voluptate nihil dicta!</p>
+				</aside>
+				<aside class="mycol col-xl-3">Col 3</aside>
+			</div>
+		</div>
+	</main>
+
+	<footer>footer</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flexbox </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+	<style>
+		.flex_container{
+			display: flex;
+			/* flex-direction: row-reverse; */
+			/* flex-wrap: wrap; */
+			/* justify-content:space-around; */
+
+			align-items: center;
+			/* align-content: flex-start; */
+
+			width: 80%;
+			height: 20em;
+			margin: 2em;
+			border: 3px solid red;
+		}
+		// TODO: make it non-flexible
+		.flex_item{
+			/* flex: 1 1 100px; */
+			width: 100px;
+			border: 1px solid blue;
+			background-color: #99F;
+		}
+		/* .flex_item:nth-last-child(1){
+			flex:2;
+			background-color: #f99;
+		} */
+		/* .flex_item:nth-last-child(1){
+			flex:3;
+			background-color: #f99;
+		} */
+	</style>
+</head>
+<body>
+
+	<div class="flex_container">
+		<div class="flex_item">0</div>
+		<div class="flex_item">1</div>
+		<div class="flex_item">2</div>
+	</div>
+
+</body>
+</html>
