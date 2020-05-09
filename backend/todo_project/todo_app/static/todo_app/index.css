@@ -1,0 +1,95 @@
+.list_todos>.header{
+  padding: 0 0 .5em 0;
+  /*border: 1px solid red;  */
+  /*font-size: 2em;*/
+}
+
+/*the add button*/
+.buttonHolder{
+  float: right;
+  margin:0 auto;
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  /*line-height: 2em;*/
+}
+.buttonHolder a{
+  text-decoration: none;
+}
+
+.button{
+  position: relative;
+  display: block;
+
+  margin: .3em;  
+
+  text-align: center; 
+  color:#e9e6e4;
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;  
+
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+  border-radius: 100%;
+  box-shadow: 
+    0px 8px 10px 0px rgba(0, 0, 0, .3), 
+    inset 0px 4px 1px 1px white, 
+    inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  
+  transition: all .1s linear;
+  /*border: 1px solid red;*/
+}
+
+
+.list_todos{
+  margin: 1em 0 0 0;
+}
+.list_todos h1{
+  float: left;
+  font-size: 1.5em;
+  line-height: 2em;
+  vertical-align: middle;  
+}
+.list_todos ul{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+}
+.list_todos li{ 
+  font-size: 1.1em;       
+  height: 3em;
+  line-height: 3em;
+  padding: 0 .5em 0 1em; 
+  background: #666; 
+  border-bottom: 1px dotted #999; 
+}  
+.list_todos li:hover{
+  background: #888;
+}    
+.list_todos li:nth-of-type(2n+1){
+  color: #fe9c8f;
+}
+.list_todos li:nth-of-type(2n){
+  color: #f9caa7;
+}
+.list_todos li span{
+  display: inline-block;   
+  height: 100%;
+}
+.list_todos li span:nth-of-type(2){            
+  float: right;        
+} 
+.list_todos li a{
+  display: inline-block;
+  height: 2em;
+  color: inherit;
+  opacity: .5;
+} 
+.list_todos li a:hover{
+  opacity: 1;
+}
+.list_todos li .fa{
+  display: inline-block;
+  width: 2em;
+  height: 100%;
+  
+  text-align: right;
+}               
