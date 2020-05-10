@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>simplestAJAXdemo </title>
+	<style>
+		.getDataBtn{
+			width: 8em;
+			border: 1px solid #333;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<header>
+
+	</header>
+	<div class="getDataBtn">Get data</div>
+	<ul class="output"></ul>
+
+	<script>
+		// dom cache
+		let getDataBtn = document.querySelector('.getDataBtn');
+		let output = document.querySelector('.output');
+
+		// URL to fetch data:
+		const dataURL = 'https://raw.githubusercontent.com/ProgressBG-WWW-Courses/JavaScript-Advanced/gh-pages/downloads/products.json';
+
+		function getDataWithXHR() {
+			// get data with AJAX
+			// initialize the the request:
+			// create a XMLHttpRequest object
+			const xhr = new window.XMLHttpRequest;
+
+
+			xhr.open("GET", dataURL, true); // async = true
+
+			// process data:
+			xhr.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					// finally do something with content:
+					data = this.responseText;
+					console.log(`data in getData: ${data}`);
+					output.innerHTML = data;
+				};
+			};
+
+			// sends the request:
+  			xhr.send();
+		}
+
+		function getDataWithFetchAPI() {
+			fetch(dataURL)
+			.then(function (response){
+				return response.text();
+			})
+			.then(function (text) {
+				renderProducts(JSON.parse(text))
+			})
+		}
+
+
+		function renderProducts(products){
+
+			products.forEach( (prod)=>{
+				// console.log( prod.name );
+				let liItemStr = `<li>
+					<span class="prodName">${prod.name}</span>
+					<span class="price">${prod.price}</span>
+				</li>`
+
+
+				output.innerHTML += liItemStr;
+			})
+
+		}
+
+
+
+
+		getDataBtn.addEventListener('click', getDataWithFetchAPI);
+
+
+
+
+	</script>
+</body>
+</html>
