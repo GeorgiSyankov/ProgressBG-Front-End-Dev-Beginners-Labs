@@ -8,8 +8,6 @@
         "html"
     ],
     "workbench.colorCustomizations": {
-        "editorError.foreground": "#ff0000",
-        "editorWarning.foreground": "#ffe600",
         "activityBar.activeBackground": "#2f7c47",
         "activityBar.activeBorder": "#422c74",
         "activityBar.background": "#2f7c47",
