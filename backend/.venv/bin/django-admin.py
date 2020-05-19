@@ -1,4 +1,4 @@
-#!/home/nemsys/projects/courses/ProgressBG/ProgressBG-Front-End-Dev/Labs/backend/.venv/bin/python
+#!/home/nemsys/projects/courses/ProgressBG/ProgressBG-Front-End-Dev/Labs/backend/.venv/bin/python3.8
 from django.core import management
 
 if __name__ == "__main__":
