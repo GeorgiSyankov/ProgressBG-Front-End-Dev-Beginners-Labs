@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+<body onscroll="console.log('scroll')" >
+	<label>user name: <input type="text" name="userName"></label>
+	<label>user pass: <input type="text" name="userPass"></label>
+
+	<button class="btn">Click me</button>
+	<div class="output"></div>
+
+	<script>
+		// TASK: on btn click => write in div.output => inputNode.value
+		// Hint: write in element: node.innerText = 'Hello'
+		let btnClik = document.querySelector(".btn");
+		let output = document.querySelector(".output"); //
+		let input = document.querySelector('[name="userName"]'); //
+
+
+
+		const changeBgColor = function(color) {
+			return function () {
+				console.dir(color);
+				document.body.style.backgroundColor = color;
+			}
+		};
+
+		btnClik.addEventListener("click", changeBgColor('red') )
+
+		// input.addEventListener('keyup', function (e) {
+		// 	console.dir(e);
+		// })
+
+
+
+
+
+	</script>
+</body>
+</html>

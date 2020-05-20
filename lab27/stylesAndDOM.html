@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>stylesAndDOM </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+	<style>
+		body{
+
+		}
+
+		.bodyStyle{
+			background-color: #f00;
+			color: #FFF;
+		}
+	</style>
+</head>
+<body style="font-size: 2em; " >
+	<h1>Hello</h1>
+	<button class="btn">change color</button>
+	<script>
+		let btn = document.querySelector('.btn');
+
+		btn.addEventListener('click', function () {
+			document.body.className = 'bodyStyle';
+
+		})
+
+	</script>
+</body>
+</html>
