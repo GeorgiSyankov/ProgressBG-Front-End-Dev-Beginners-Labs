@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>getInputvalue </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+</head>
+<body>
+	<input type="text" name="uname" placeholder="Enter some text here">
+
+
+	<button onclick="writeInInput();">SHOW</button>
+	<div id="output"></div>
+
+	<script>
+		let input = document.querySelector('[name="uname"]');
+		let output = document.querySelector('#output');
+
+		function writeInInput() {
+			// wait the user to enter something
+			output.innerHTML = input.value;
+		}
+
+
+
+	</script>
+</body>
+</html>
