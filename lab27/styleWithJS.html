@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>styleWithJS </title>
+	<style>
+		.box{
+			width: 8em;
+			height: 8em;
+			background-color: #f99;
+		}
+
+		.vip{
+			background-color: #99F;
+			font-size: 50px;
+		}
+
+		p{
+			display: none;
+		}
+
+		.shownP{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" style="color:#FFF">text</div>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates sit ducimus explicabo, magni vitae placeat doloremque reiciendis, ipsa, adipisci temporibus accusantium. Dignissimos, asperiores? Porro, praesentium deleniti eum cupiditate doloremque id.</p>
+	<button id="btnChange">Change Color</button>
+
+	<script>
+		let box = document.querySelector('.box');
+		let btnChange = document.querySelector('#btnChange');
+
+		function changeDivColor() {
+			// box.style.backgroundColor = '#99f';
+			// console.dir(box.style);
+
+			/* box.style.backgroundColor = '#99f';
+			box.style.fontSize = '50px'; */
+
+			// add '.vip' class to div:
+			// box.className = box.className + ' vip';
+			box.classList.add('vip');
+
+
+			document.querySelector('p').classList.toggle('shownP');
+		}
+
+		// changeDivColor();
+		btnChange.addEventListener('click', changeDivColor );
+
+
+		// show all CSS for .box:
+		let divStyle = window.getComputedStyle(box);
+		console.dir(divStyle);
+
+	</script>
+</body>
+</html>

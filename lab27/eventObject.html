@@ -28,29 +28,21 @@
 		let btnOK = document.querySelector('.btnOK')
 		let output = document.querySelector('.output')
 
-		function calcVat() {
-			let basePrice = input.value;
-			// console.log(typeof(basePrice));
-
-			let priceWithVat = basePrice * 1.2;
-			// let priceWithVat = +basePrice + (20/100)*basePrice;
-
-			// TASK: round the value in priceWithVat:
-
-			output.innerHTML = priceWithVat;
-		}
-
-		btnOK.addEventListener('click', calcVat)
-
+		btnOK.addEventListener('click', function (event) {
+			// console.dir(event);
+			output.innerHTML = `
+				<b>${event.clientX}</b><br>
+				<b>${event.clientY}</b><br>
+			`;
+		});
 
 		input.addEventListener('keypress', function (event) {
 			console.dir(event);
 
 			if(event.key === 'Enter'){
-				calcVat();
+				output.innerHTML = input.value;
 			}
 		})
-
 
 	</script>
 </body>
