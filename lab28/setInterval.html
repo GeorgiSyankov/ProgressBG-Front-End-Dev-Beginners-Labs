@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>setInterval </title>
+	<style>
+		.box{
+			width: 10em;
+			height: 10em;
+			/* margin: 0 auto; */
+			border: .3em solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<button class="btnStop">Stop</button>
+
+	<script>
+		// DOM cache
+		let box = document.querySelector('.box');
+		let btnStop = document.querySelector('.btnStop');
+
+		// colors:
+		let colors = ['red', 'green', 'blue'];
+		let i = 0;
+		let intervalID;
+
+		function changeColor() {
+			box.style.backgroundColor = colors[i++];
+
+			console.log(`i = ${i}`); // 0, 1,2,0, 1,2, 0
+			// HW: make it work with 1
+			if(i===2){
+				i = 0;
+			}
+		}
+
+		intervalID = setInterval(changeColor, 1000);
+
+
+		btnStop.addEventListener('click', function () {
+			clearInterval(intervalID);
+		} );
+		// click => 'undefined'
+
+
+
+		console.log(`i = ${i}`); // i = 1
+
+
+
+	</script>
+</body>
+</html>
