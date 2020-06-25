@@ -1,0 +1,2 @@
+CTRL+SHIFT+I : open browser console
+CTRL+/ : toggle comments

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.basePrice{
+			/* border: 2px solid red; */
+			margin-bottom: 10px;
+		}
+		.basePrice input{
+			width: 200px;
+			margin-left: 10px;
+		}
+		button{
+			background: red;
+		}
+	</style>
+
+
+</head>
+<body>
+	<h1>DDS Calculator</h1>
+	<div class="basePrice">
+		<label for="">Цена без ДДС: <input type="number"></label>
+	</div>
+	<div class="dds">
+		<label for="">ДДС: <input type="number" value="20"></label>
+	</div>
+	<button>Calc</button>
+	<hr>
+	<div class="output"></div>
+
+	<script>
+		let btn = document.querySelector('button');
+		let basePriceInput = document.querySelector('.basePrice input');
+		// HW: get .output DOM element
+		// let output = ?
+
+
+		// change body bg color:
+		let changeBg = function() {
+			document.body.style.backgroundColor = 'red';
+		}
+
+		// calclulate DDS:
+		function calcDDSparams) {
+			let priceWithDDS = basePriceInput.value * 1.2;
+			console.log(priceWithDDS);
+
+			// HW: output the price in output element
+
+
+		}
+
+		btn.addEventListener('click', changeBg )
+
+
+
+		// click => changeBg
+	</script>
+</body>
+</html>

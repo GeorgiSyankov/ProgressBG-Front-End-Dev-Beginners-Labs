@@ -1,0 +1,126 @@
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.forms.models import model_to_dict
+from django.utils.timezone import make_aware
+
+import datetime
+
+from todo_app.models import Todo
+from todo_app.forms import CreateUpdateTaskForm
+
+
+app_name="Todo App"
+due_date_format = "%Y-%m-%dT%H:%M"
+
+# /todos/ => list all tasks
+def index(request):
+    tasks = Todo.objects.order_by('id')
+
+    # generate json from tasks
+
+    # form = TaksForm()
+
+    template_file = 'todo_app/index.html'
+
+    context = {
+        'form': CreateUpdateTaskForm,
+        'tasks': tasks,
+        'app_name': 'Todo App',
+        'page_name': 'index'
+    }
+
+
+    return render(request, template_file, context)
+
+
+# /todos/add => add a tasks
+def add(request):
+    # save the filled form data to DB:
+    if request.method == 'POST':
+      form = CreateUpdateTaskForm(request.POST, request.FILES)
+
+      if form.is_valid():
+        title = form.cleaned_data['title']
+        description = form.cleaned_data['description']
+
+        if request.POST.get('due', None):
+          due = form.cleaned_data['due']
+        else:
+          due= make_aware(datetime.datetime.now() + datetime.timedelta(days=1))
+
+        Todo.objects.create(
+          title = title,
+          description = description,
+          due = due,
+        )
+        return redirect('todo_index')
+      else:
+        print(f"\nform.errors: {form.errors.items()}\n")
+        pass
+    # render the create form:
+    elif request.method == 'GET':
+      form = CreateUpdateTaskForm()
+
+    template_file = 'todo_app/add.html'
+
+    context = {
+        'form': form,
+        'app_name': app_name,
+        'page_name': 'Add Todo'
+    }
+
+    return render(request, template_file, context)
+
+# /todos/update/id => update a task with given id
+def update(request, id,  **kwargs):
+  task = Todo.objects.get(id=id)
+
+  if request.method == "POST":
+    form = CreateUpdateTaskForm(request.POST, request.FILES)
+
+    if form.is_valid():
+      title = form.cleaned_data['title']
+      description = form.cleaned_data['description']
+      due = form.cleaned_data['due']
+
+      Todo.objects.filter(id=id).update(
+        title = title,
+        description = description,
+        due = due,
+        )
+
+      return redirect('todo_index')
+  else:
+    # render the update form on Get method:
+    form = CreateUpdateTaskForm(model_to_dict(task))
+    print(f'####form: {form}')
+
+
+  template_file = 'todo_app/update.html'
+
+  context = {
+      'task': task,
+      'form': form,
+      'app_name': app_name,
+      'page_name': 'Update Todo'
+  }
+
+  return render(request, template_file, context)
+
+# /todos/delete/id => delete a task with given id
+def delete(request, id, **kwargs):
+
+    Todo.objects.filter(id=id).delete()
+
+    return redirect('todo_index')
+
+# /todos/complete/id => complete a task with given id
+def complete(request, id):
+    task = Todo.objects.get(id=id)
+
+    task.completed = not task.completed;
+
+    task.save()
+
+    return redirect('todo_index')
+
