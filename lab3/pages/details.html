@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Detals</title>
+</head>
+<body>
+	<h2>Details on <span id="orderNumber"></span></h2>
+	<div class="details">
+		<img src="" alt="details img">
+	</div>
+
+	<script>
+		// we assume that these data will come from server
+		let urls = {
+			'3308' : 'http://3308.jpg',
+			'3307' : 'http://3307.docx',
+		};
+
+
+		let orderNumber = localStorage.getItem('orderNumber');
+
+		document.querySelector('#orderNumber').innerHTML = orderNumber;
+
+		// set img scr attribute:
+		let img = document.querySelector('.details img');
+		img.src = urls[orderNumber];
+	</script>
+</body>
+</html>
