@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Form</title>
+</head>
+<body>
+	<ul>
+		<li><a href="pages/contacts.html">Contacts</a></li>
+	</ul>
+	<h1>Login Form</h1>
+	<form action="backend/login.txt">
+		<!-- TODO: show how works and why not working here: -->
+		<div>user name: <input type="text"
+			autocomplete="off"
+			autofocus
+			placeholder="моля, въведете име"
+			name="userName"
+			></div>
+		<div>pass: <input type="password" name="pass"></div>
+		<div>fav. color: <input type="color" name="color"></div>
+		<div>gender:
+			<label for="female">female</label><input id="female"	type="radio" name="gender" value="1">
+			<label>male:<input type="radio" name="gender" value="0"></label>
+		</div>
+		<div>device:
+			phone: <input type="checkbox" name="device" value="1">
+			pc: <input type="checkbox" name="device" value="2">
+		</div>
+		<div>
+			<select name="town" id="" multiple>
+				<optgroup label="town">
+					<option value="1">София</option>
+					<option value="2">Париж</option>
+					<option value="3">Лондон</option>
+				</optgroup>
+				<optgroup label="village">
+					<option value="">Village1</option>
+					<option value="">Village2</option>
+				</optgroup>
+			</select>
+		</div>
+		<fieldset>
+			<label for="">Comment:</label>
+			<textarea name="" cols="3" rows="1">jdskkdskfdsjkdsjkfdsjk</textarea>
+		</fieldset>
+		<hr>
+		<button>LogMe</button>
+		<button type="reset"><img src="" alt="clear"></button>
+		<button type="button">Click me</button>
+		<hr>
+		<input type="submit" value="LogMe">
+	</form>
+</body>
+</html>
