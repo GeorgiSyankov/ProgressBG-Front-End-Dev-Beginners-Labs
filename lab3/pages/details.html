@@ -12,7 +12,7 @@
 	</div>
 
 	<script>
-		// we assume that these data will come from server
+		// we assume that these data will come from server, as JSON (or XML)
 		let urls = {
 			'3308' : 'http://3308.jpg',
 			'3307' : 'http://3307.docx',
@@ -25,7 +25,10 @@
 
 		// set img scr attribute:
 		let img = document.querySelector('.details img');
-		img.src = urls[orderNumber];
+		let imgURL = urls[orderNumber];
+		img.src = imgURL;
+		// for debugging: set alt atribute:
+		img.alt += `: ${imgURL}`;
 	</script>
 </body>
 </html>
