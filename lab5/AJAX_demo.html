@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AJAX demo</title>
+</head>
+<body>
+	<label>Delete todo ID: <input type="number"></label>
+
+	<table class="output" border="1">
+
+	</table>
+	<script>
+		let output = document.querySelector('.output');
+		let inputNode = document.querySelector('[type="number"]');
+		let deleteID;
+
+
+		// let todosURL = './backend/data.txt'
+		let todosURL = 'http://localhost:3000/todos'
+
+		// get todos data from server
+		fetch(todosURL)
+		.then(function (r){
+			console.log(`status: ${r.status}`);
+			return r.text();
+		})
+		.then(function (responseText){
+			// do something with responseText
+			let todos = JSON.parse(responseText);
+			console.dir(todos);
+
+			let sortedTodos = todos.sort( (f, s)=>{
+				if( f.id > s.id){
+					return -1;
+				}
+			})
+
+			sortedTodos.forEach(todo => {
+				output.innerHTML +=`
+					<tr>
+						<td>${todo.id}</td>
+						<td>${todo.title}</td>
+						<td>${todo.completed}</td>
+					</tr>
+				`
+			});
+
+
+		})
+
+		inputNode.addEventListener('blur', function () {
+			deleteID = inputNode.value;
+			console.log(`deleteID: ${deleteID}`);
+
+			let deleteURL = todosURL+'/'+deleteID;
+
+			// # HW: use HTTP DELETE method for deleteURL:
+			fetch(deleteURL)
+				.then(function (r){
+					console.log(`status: ${r.status}`);
+					return r.text();
+				})
+				.then(function (responseText){
+
+				}
+
+		})
+
+		// render todos array
+	</script>
+</body>
+</html>
