@@ -5,85 +5,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>onScrollTest </title>
 	<style>
-		.output tr{
-			height: 5em;
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.page{
+			height: 100vh;
+		}
+		.page:nth-child(1){
+			background-color: #F99;
+		}
+		.page:nth-child(2){
+			background-color: #9F9;
+		}
+		.page:nth-child(3){
+			background-color: #99F;
 		}
 	</style>
 </head>
 <body>
-	<label>Delete todo ID: <input type="number"></label>
+	<div class="page">page 1</div>
+	<div class="page">page 2</div>
+	<div class="page">page 3</div>
 
-	<table class="output" border="1">
-
-	</table>
 	<script>
-		let output = document.querySelector('.output');
-		let inputNode = document.querySelector('[type="number"]');
-		let deleteID;
-
-
-		// let todosURL = './backend/data.txt'
-		let todosURL = 'db.json';
-
-		const ROWS_NUMBER = 3;
-
-		// displayPage( ROWS_NUMBER, todos, output );
-		function displayPage( rowsNumber, records, outputNode ) {
-			let currentPage = 1;
-			let lastPage = Math.ceil(records.lenght/rowsNumber);
-			let currentRecords
-
-			for (let i = currentPage; i <=lastPage ; i++) {
-
-				// HW/TODO: make it work
-				currentRecords.forEach(r => {
-					outputNode.innerHTML +=`
-						<tr>
-							<td>${r.id}</td>
-							<td>${r.title}</td>
-						</tr>
-					`
-				});
-			}
-
-
-
-		}
-
-		// get todos data from server
-		fetch(todosURL)
-		.then(function (r){
-			return r.text();
-		})
-		.then(function (responseText){
-			// do something with responseText
-			console.log(`response text: ${responseText}`);
-			let todos = JSON.parse(responseText);
-			console.dir(todos);
-
-			// display only 3 rows
-			displayPage( ROWS_NUMBER, todos, output );
-
-			// todos.forEach(todo => {
-			// 	output.innerHTML +=`
-			// 		<tr>
-			// 			<td>${todo.id}</td>
-			// 			<td>${todo.title}</td>
-			// 		</tr>
-			// 	`
-			// });
-
-
-		})
+		let currentPage = 1;
 
 		window.addEventListener('scroll', function (event) {
 			// console.dir(event);
 			window.onscroll = function(ev) {
-			if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-				console.log(`END`);
+				// demo for scroll ot top of each page:
+				if( window.scrollY - window.innerHeight*currentPage >=0){
+					currentPage+=1;
+					console.log(`page ${currentPage}`);
+				}
+
+				// demo for scroll on bottom check:
+				if ((window.innerHeight + Math.ceil(window.scrollY)) >= document.body.offsetHeight) {
+					console.log(`Scrolled at Bottom`);
+				}
 			}
-		};
-		})
+		});
 	</script>
 </body>
 </html>

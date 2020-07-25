@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>onScrollTest </title>
+	<style>
+		.output tr{
+			height: 5em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Todo list by pages</h1>
+	<table border="1">
+		<tbody class="output"></tbody>
+	</table>
+
+	<script>
+		let output = document.querySelector('.output');
+		let inputNode = document.querySelector('[type="number"]');
+
+
+		// let todosURL = './backend/data.txt'
+		let todosURL = 'db.json';
+
+		const ROWS_NUMBER = 3;
+
+		// displayAllByPages( ROWS_NUMBER, todos, output );
+		function displayAllByPages( rowsNumber, records, outputNode ) {
+			let lastPage = Math.ceil(records.length/rowsNumber);
+			let currentRecords;
+			let currentRecordsStrat;
+			let currentRecordsEnd;
+
+			// slice currentRecords from records for each page:
+			for (let currentPage = 1; currentPage <= lastPage ; currentPage++) {
+				// set start, end slice indexes:
+				currentRecordsStrat = currentPage === 1 ?  0 : currentRecordsEnd;
+				currentRecordsEnd = rowsNumber*currentPage;
+
+				// get currentRecords slice:
+				currentRecords = records.slice(currentRecordsStrat, currentRecordsEnd);
+
+				// display currentRecords:
+				outputNode.innerHTML += `<tr><th colspan=2>Page ${currentPage}</th></tr>`;
+				currentRecords.forEach(r => {
+					outputNode.innerHTML +=`
+						<tr>
+							<td>${r.id}</td>
+							<td>${r.title}</td>
+							<td>${r.completed}</td>
+						</tr>
+					`
+				});
+			}
+		}
+
+		// get todos data from server
+		fetch(todosURL)
+		.then(function (r){
+			return r.text();
+		})
+		.then(function (responseText){
+			// do something with responseText
+			console.log(`response text: ${responseText}`);
+			let todos = JSON.parse(responseText);
+			console.dir(todos);
+
+			displayAllByPages( ROWS_NUMBER, todos, output );
+		})
+	</script>
+</body>
+</html>
