@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dataTablesFetchedArrayDemo </title>
+
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+	<!-- DataTables CDN: -->
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+	<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+	<h1>DataTables - Fetched Array Demo</h1>
+	<p>Demo for <a href="https://www.datatables.net/manual/data/#Javascript">jS Array data source</a></p>
+	<hr>
+
+	<table id="dtTableDemo" class="display">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>title</th>
+				<th>completed</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+
+	<script>
+		// let todosURL = './backend/data.txt'
+		let todosURL = 'todos.json';
+
+		// get todos data from server
+		fetch(todosURL)
+		.then(function (r){
+			return r.text();
+		})
+		.then(function (responseText){
+			// do something with responseText
+			console.log(`response text: ${responseText}`);
+			let todos = JSON.parse(responseText);
+			console.dir(todos);
+
+			// show data as DataTable:
+			$('#dtTableDemo').DataTable({
+				data: todos,
+				columns: [
+					{ data: 'id' },
+					{ data: 'title' },
+					{ data: 'completed' }
+				]
+			});
+		})
+	</script>
+</body>
+
+</html>

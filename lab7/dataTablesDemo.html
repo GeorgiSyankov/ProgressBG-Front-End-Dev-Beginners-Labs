@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dataTablesDemo </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+	<!-- DataTables CDN: -->
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+	<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+
+</head>
+
+<body>
+	<h1>DataTables</h1>
+	<p>Demo for <a href="https://datatables.net/">jQuery DataTables Plugin</a></p>
+	<hr>
+
+	<table id="dtTableDemo" class="display">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>title</th>
+				<th>completed</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+
+	<script>
+		$(document).ready( function () {
+			$('#dtTableDemo').DataTable();
+		} );
+	</script>
+</body>
+
+</html>
