@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* set red color only to P in Main */
+		/* selector1<combinator>selector2 */
+		main>p{
+			color:red;
+		}
+		main>p.big{
+			font-size: 40px;
+		}
+
+		main i{
+			color: green;
+		}
+		/* TASK:
+			Slect the first P after H1, which are in MAIN
+		 */
+		main>h1+p{
+			border: 1px solid orange;
+		}
+		img[alt="house"]{
+			width: 50px
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><i>H1</i></h1>
+		<p>p1</p>
+		<p class="big">p2</p>
+	</header>
+	<main>
+		<h1><i>H1</i></h1>
+		<p>p1</p>
+		<p>p2</p>
+
+		<a href="https://progressbg.net"><img src="../images/small_house.jpeg" alt="house"></a>
+		<img src="../images/small_house.jpeg" alt="bigHous">
+	</main>
+</body>
+</html>
