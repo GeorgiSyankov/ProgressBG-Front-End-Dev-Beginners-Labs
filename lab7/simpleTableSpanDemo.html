@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+	<!-- DataTables CDN: -->
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+	<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+	<!-- TODO: fix DT error -->
+	<table id="dtTableDemo">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>p2</th>
+				<th>p3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td colspan="2" rowspan="2"><img src="../images/Representation-of-a-linear-binary-SVM-classifier-The-optimal-separating-hyperplane-is.png" width="800" alt=""></td>
+			</tr>
+			<tr>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>3838954395439</td>
+				<td>fdff</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>3jsk</td>
+				<td>jdsjfkdsfjdskjdskdskfjdsk</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<script>
+		$('#dtTableDemo').DataTable();
+	</script>
+</body>
+</html>

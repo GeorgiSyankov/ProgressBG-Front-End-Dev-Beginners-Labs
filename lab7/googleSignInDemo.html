@@ -15,42 +15,34 @@
 	<a href="https://developers.google.com/identity/sign-in/web/sign-in#specify_your_apps_client_id">Google Sign-In for Websites</a>
 	<a href="https://developers.google.com/identity/sign-in/web/build-button"></a>
 	<hr>
+
 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<a href="#" onclick="signOut();">Sign out</a>
-	<hr>
-	<div class="userData"></div>
 
 
 	<script>
-		let userData = document.querySelector('.userData');
 
 		function onSignIn(googleUser) {
-			console.dir(googleUser);
+			var profile = googleUser.getBasicProfile();
+			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+			console.log('Name: ' + profile.getName());
+			console.log('Image URL: ' + profile.getImageUrl());
+			console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-			let profile = googleUser.getBasicProfile();
-			// console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-			// console.log('Name: ' + profile.getName());
-			// console.log('Image URL: ' + profile.getImageUrl());
-			// console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+			let userEmail = profile.getEmail();//'alabala@gmail.com'
 
-			userData.innerHTML = `
-				<div>You are successfully signed-in as:</div>
-				<div>Name: ${profile.getName()}</div>
-				<div>Email: ${profile.getEmail()}</div>
-				<div>
-					<img src="${profile.getImageUrl()}">
-				</div>
-			`
+
+			let response = 0; // should not be auth
+
+
+
 		}
-
 		function signOut() {
 			var auth2 = gapi.auth2.getAuthInstance();
 			auth2.signOut().then(function () {
-				console.log('User signed out.');
-				userData.innerHTML = 'You are signed out';
+			console.log('User signed out.');
 			});
 		}
-
 
 	</script>
 </body>
