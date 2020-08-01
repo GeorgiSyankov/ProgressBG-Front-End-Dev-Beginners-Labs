@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 200px;
+			/* TODO: update slides with mdn spec */
+			height: 150px;
+			border: 5px solid orange;
+			font-size: 20px;
+		}
+		.red{
+			background-color: red;
+			margin: 0 auto;
+			margin-bottom: 50px;
+		}
+		.blue{
+			background-color: blue;
+		}
+		.container{
+			width: 600px;
+			border: 5px solid gray;
+		}
+		a.box{
+			padding: 10px 20px;
+			color: white;
+		}
+		.test{
+			border: 5px solid red;
+		}
+		.demo1{
+			margin-bottom: 100px;
+		}
+		.demo2{
+			margin-top: 50px;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- TODO: why not render space: -->
+	<div>
+		<div class="container">
+			<div class="box red">box1</div>
+			<div class="box blue">box2</div>
+		</div>
+		<a href="#" class="box red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto. Voluptate recusandae doloribus porro voluptatem necessitatibus dolorum optio in suscipit harum magnam! Numquam debitis quasi, vero accusamus molestiae voluptas dolores.</a>
+		<!-- <a href="#" class="box blue">link2</a> -->
+		<hr>
+		<p class="box">ggg</p><p class="box">ggg</p>
+		<a href="#">banner</a>
+		<hr>
+		<img class="box red" src="../images/small_house.jpeg" alt="img1">
+		<img class="box red" src="../images/small_house.jpeg" alt="img2">
+	</div>
+	<h2>Div vs. Span</h2>
+	<p>white <span class="test">blue</span> red</p>
+	<h2>margin collapse</h2>
+	<div style="border: 5px solid green">
+
+		<div class="box demo1">sibl1</div>
+
+		<div class="box demo2">sibl2</div>
+
+	</div>
+
+</body>
+</html>
