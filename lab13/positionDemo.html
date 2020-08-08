@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>positionDemo </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		html{
+			width: 100%;
+			height: 100%;
+			border: 10px solid #9F9;
+			box-sizing: border-box;
+		}
+		.container{
+			width: 50%;
+			position: relative;
+			border: 10px solid gray;
+		}
+		.box{
+			width: 10em;
+			height: 10em;
+		}
+		.red{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 2em;
+
+			background-color: #F99;
+		}
+		.blue{
+			background-color: #99F;
+		}
+		.content{
+			font-size: 3em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box red"></div>
+		<div class="box blue"></div>
+	</div>
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aut ad, inventore tempore earum dignissimos possimus similique accusamus facere fugiat quam cum molestias nobis, quas in id praesentium laborum quidem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos voluptatum optio et ut totam, quisquam delectus nulla repellendus soluta rem adipisci vel maiores ratione numquam deserunt quibusdam officia eligendi quos.</p>
+	</div>
+</body>
+</html>
